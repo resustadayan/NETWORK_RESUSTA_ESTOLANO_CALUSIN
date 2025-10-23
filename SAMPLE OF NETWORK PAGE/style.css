@@ -34,11 +34,13 @@ body {
 .logo img {
   height: 70px;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .org-name {
   font-weight: bold;
   font-size: 1.4rem;
+  cursor: pointer;
 }
 
 .nav-links {
