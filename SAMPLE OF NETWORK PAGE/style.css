@@ -9,7 +9,7 @@ body {
   background: linear-gradient(to bottom, #f2f2f2, #e6e6e6);
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   color: #222;
-  line-height: 1.6;
+  line-height: 1.5;
   overflow-x: hidden;
 }
 
@@ -93,7 +93,7 @@ body {
 }
 
 .main-header {
-  padding: 80px ;
+  padding: 90px;
   background: url("https://i.pinimg.com/736x/91/be/bc/91bebc81846c803f7afe8a42e265a98f.jpg")
     no-repeat center center fixed;
   background-size: cover;
