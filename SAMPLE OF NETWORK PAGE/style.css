@@ -92,7 +92,6 @@ body {
   }
 }
 
-
 .main-header {
   padding: 80px ;
   background: url("https://i.pinimg.com/736x/91/be/bc/91bebc81846c803f7afe8a42e265a98f.jpg")
@@ -113,17 +112,13 @@ body {
 
 /* Remove dark transparent overlay */
 .header-overlay {
-  display: none;
-}
-
-/* One centered flexbox for logo + all text */
-.header-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  transform: rotateX(5deg) translateZ(30px);
-  animation: fadeIn 1.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
 
 .logo-overlay {
@@ -163,36 +158,8 @@ body {
 
 .header-content h4 {
   font-size: 1.6rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  margin: 5px 0;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  text-align: center;
 }
-
-.header-content h2 {
-  font-size: 2.7rem;
-  font-weight: 600;
-  margin-top: 5px;
-  color: white; /* elegant gold */
-  text-shadow:
-    0 0 15px rgba(68, 5, 5, 0.7),
-    0 0 25px rgba(23, 3, 3, 0.5);
-  letter-spacing: 1.5px;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px) rotateX(5deg);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) rotateX(5deg);
-  }
-}
-
 
 #about {
   background: none !important;
@@ -241,6 +208,17 @@ body {
   font-size: 1rem;
   line-height: 1.6;
 }
+
+
+.gallery-section {
+  text-align: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
 
 #activities {
   background: transparent !important;
