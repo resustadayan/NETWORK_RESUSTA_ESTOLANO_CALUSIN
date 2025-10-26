@@ -312,6 +312,103 @@ body {
   transform: scale(1.05);
 }
 
+#about {
+  background-color: #f6e9da;
+  padding: 60px 0;
+  text-align: center;
+}
+
+/* Main wrapper */
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Centered Logo on Top */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  object-fit: contain;
+  background-color: #ffffffcc; /* translucent white */
+  border: 6px solid #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.big-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Vision & Mission Row */
+.vm-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Card Styling */
+.vision,
+.mission {
+  background-color: #f3dcc2;
+  border-radius: 15px;
+  padding: 30px 25px;
+  width: 380px;
+  min-height: 260px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision:hover,
+.mission:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Text */
+.about-us h2 {
+  color: #4b1e1e;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.about-us p {
+  color: #3b2c2c;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .vm-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .vision,
+  .mission {
+    width: 90%;
+  }
+
+  .big-logo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+
 footer {
   text-align: center;
   padding: 20px;
