@@ -188,55 +188,6 @@ body {
 }
 
 
-
-#about {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 auto !important;
-}
-
-.about-us {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  justify-items: center;
-  align-items: start;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.about-us .vision,
-.about-us .mission {
-  border: 2px solid #e63737;
-  border-radius: 10px;
-  padding: 25px 20px;
-  background: transparent;
-  transition: border-color 0.3s ease;
-  width: 100%;
-  max-width: 450px;
-}
-
-.about-us .vision:hover,
-.about-us .mission:hover {
-  border-color: #e2a60e;
-}
-
-.about-us h2 {
-  color: maroon;
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-.about-us p {
-  color: black;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
 .gallery-section {
   text-align: center;
   background: none;
