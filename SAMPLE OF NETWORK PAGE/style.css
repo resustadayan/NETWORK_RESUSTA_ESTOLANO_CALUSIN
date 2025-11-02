@@ -106,16 +106,16 @@ body {
   align-items: center;
   text-align: center;
 
-  /* subtle 3D perspective */
+  
   perspective: 1000px;
 }
 
-/* Remove dark transparent overlay */
+
 .header-overlay {
   display: none;
 }
 
-/* One centered flexbox for logo + all text */
+
 .header-content {
   display: flex;
   flex-direction: column;
@@ -125,7 +125,7 @@ body {
   animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Logo 3D styling */
+
 .big-logo {
   height: 200px;
   width: 200px;
@@ -142,7 +142,7 @@ body {
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8);
 }
 
-/* TEXT STYLES — more visual appeal */
+
 .header-content h1 {
   font-size: 1.rem;
   font-weight: 800;
@@ -168,14 +168,14 @@ body {
   font-size: 2.7rem;
   font-weight: 600;
   margin-top: 5px;
-  color: white; /* elegant gold */
+  color: white; 
   text-shadow:
     0 0 15px rgba(68, 5, 5, 0.7),
     0 0 25px rgba(23, 3, 3, 0.5);
   letter-spacing: 1.5px;
 }
 
-/* Fade-in animation */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -187,55 +187,6 @@ body {
   }
 }
 
-
-
-#about {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 auto !important;
-}
-
-.about-us {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  justify-items: center;
-  align-items: start;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.about-us .vision,
-.about-us .mission {
-  border: 2px solid #e63737;
-  border-radius: 10px;
-  padding: 25px 20px;
-  background: transparent;
-  transition: border-color 0.3s ease;
-  width: 100%;
-  max-width: 450px;
-}
-
-.about-us .vision:hover,
-.about-us .mission:hover {
-  border-color: #e2a60e;
-}
-
-.about-us h2 {
-  color: maroon;
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-.about-us p {
-  color: black;
-  font-size: 1rem;
-  line-height: 1.6;
-}
 
 .gallery-section {
   text-align: center;
@@ -293,16 +244,16 @@ body {
   font-size: 1rem;
 }
 
-/* Flexbox Container for Cards */
+
 .benefit-cards {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
-  perspective: 1000px; /* Enables 3D depth */
+  perspective: 1000px;
 }
 
-/* Individual Card */
+
 .card {
   background-color: #fdfaf6;
   border-radius: 16px;
@@ -319,7 +270,7 @@ body {
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.2);
 }
 
-/* Card Image */
+
 .card img {
   width: 100%;
   height: 210px;
@@ -329,7 +280,6 @@ body {
   border-top-right-radius: 16px;
 }
 
-/* Card Title & Text */
 .card h3 {
   font-size: 1.3rem;
   color: #3b2e25;
@@ -344,7 +294,7 @@ body {
   line-height: 1.6;
 }
 
-/* Button Style */
+
 .card button {
   background-color: #7b4b2a;
   color: #fff;
@@ -360,6 +310,102 @@ body {
   background-color: #9c6643;
   transform: scale(1.05);
 }
+
+#about {
+  background-color: #f6e9da;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  object-fit: contain;
+  background-color: #ffffffcc; 
+  border: 6px solid #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.big-logo:hover {
+  transform: scale(1.05);
+}
+
+
+.vm-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+
+.vision,
+.mission {
+  background-color: #f3dcc2;
+  border-radius: 15px;
+  padding: 30px 25px;
+  width: 380px;
+  min-height: 260px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision:hover,
+.mission:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+.about-us h2 {
+  color: #4b1e1e;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.about-us p {
+  color: #3b2c2c;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 900px) {
+  .vm-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .vision,
+  .mission {
+    width: 90%;
+  }
+
+  .big-logo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
 
 footer {
   text-align: center;
