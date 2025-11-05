@@ -11,9 +11,11 @@ body {
   color: #222;
   line-height: 1.5;
   overflow-x: hidden;
+  width: 100vw;
+  max-width: 100%;
 }
 
-
+/* NAVBAR - Full Width */
 .navbar {
   background: linear-gradient(90deg, maroon, black);
   color: white;
@@ -23,7 +25,8 @@ body {
   padding: 15px 20px;
   position: sticky;
   top: 0;
-  z-index: 2000; 
+  z-index: 2000;
+  width: 100%;
 }
 
 .logo {
@@ -92,15 +95,17 @@ body {
   }
 }
 
+/* HEADER - Full Width */
 .main-header {
   position: relative;
-  padding: 100px 20px;
+  padding: 100px 0;
   background: url("https://i.pinimg.com/736x/91/be/bc/91bebc81846c803f7afe8a42e265a98f.jpg")
     no-repeat center center;
   background-size: cover;
   background-attachment: scroll;
   color: #fff;
   min-height: 70vh;
+  width: 100%;
 
   display: flex;
   justify-content: center;
@@ -108,9 +113,8 @@ body {
   text-align: center;
 
   overflow: hidden;
-  transition: all 0.4s ease-in-out; 
+  transition: all 0.4s ease-in-out;
 }
-
 
 .main-header::before {
   content: "";
@@ -121,7 +125,6 @@ body {
   z-index: 1;
 }
 
-
 .header-content {
   position: relative;
   z-index: 2;
@@ -131,16 +134,18 @@ body {
   gap: 10px;
   transform: rotateX(3deg) translateZ(15px);
   animation: fadeIn 1.5s ease-in-out;
+  width: 100%;
+  margin: 0;
 }
 
-
 .header-content .big-logo {
-  width: 160px;
-  height: auto;
-  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  border-radius: 20px; /* Curved edges for square */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   margin-bottom: 15px;
   transition: transform 0.4s ease;
+  object-fit: cover; /* Ensure image fills the square properly */
 }
 
 .header-content .big-logo:hover {
@@ -167,42 +172,40 @@ body {
   margin: 0;
 }
 
-
 @media screen and (max-width: 768px) {
   .main-header {
-    padding: 50px 15px;    
-    min-height: auto;         
+    padding: 50px 0;
+    min-height: auto;
     height: auto;
-    background-size: cover;   
+    background-size: cover;
     background-position: center;
-    border-radius: 0;          
+    border-radius: 0;
   }
 
   .header-content .big-logo {
-    width: 120px;            
+    width: 160px;
+    height: 160px;
     margin-bottom: 10px;
   }
 
   .header-content h1 {
-    font-size: 1.0rem;
+    font-size: 1.8rem;
     letter-spacing: 1px;
   }
 
   .header-content h2 {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1.3;
   }
 
   .header-content h4 {
-    font-size: 1.0rem;
+    font-size: 1.1rem;
   }
 
   .main-header::before {
     backdrop-filter: blur(1px);
   }
 }
-
-
 
 @keyframes fadeIn {
   from {
@@ -215,7 +218,6 @@ body {
   }
 }
 
-
 @media (max-width: 768px) {
   .header-content h1 {
     font-size: 2.3rem;
@@ -224,27 +226,27 @@ body {
     font-size: 1.2rem;
   }
   .header-content .big-logo {
-    width: 120px;
+    width: 160px;
+    height: 160px;
   }
 }
 
-
 .big-logo {
-  height: 200px;
-  width: 200px;
+  width: 300px; /* Square dimensions */
+  height: 300px; /* Square dimensions */
+  border-radius: 25px; /* Curved edges for square */
   background: #fff;
-  border-radius: 50%;
   margin-bottom: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
   transform: translateZ(40px);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  object-fit: cover; /* Ensure image fills the square properly */
 }
 
 .big-logo:hover {
   transform: scale(1.05) translateZ(60px);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8);
 }
-
 
 .header-content h1 {
   font-size: auto;
@@ -278,7 +280,6 @@ body {
   letter-spacing: 1.5px;
 }
 
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -290,11 +291,13 @@ body {
   }
 }
 
+/* OFFICERS - Full Width */
 #officers {
   text-align: center;
-  padding: 60px 20px;
+  padding: 60px 0;
   background-color: #f9f4ee;
   font-family: 'Poppins', sans-serif;
+  width: 100%;
 }
 
 #officers h2 {
@@ -303,28 +306,29 @@ body {
   color: #4b1e1e;
   font-weight: 600;
   letter-spacing: 1px;
+  padding: 0 20px;
 }
 
 .slider-container {
   position: relative;
   overflow: hidden;
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
 }
-
 
 .slider {
   display: flex;
   transition: transform 0.6s ease;
+  width: 100%;
+  padding: 0 10px;
 }
-
 
 .officer-card {
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   width: 280px;
-  margin: 0 15px;
+  margin: 0 10px;
   flex-shrink: 0;
   padding: 15px;
   text-align: center;
@@ -339,7 +343,6 @@ body {
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-
 .officer-card img {
   width: 100%;
   height: 300px;
@@ -347,7 +350,6 @@ body {
   border-radius: 10px;
   margin-bottom: 10px;
 }
-
 
 .officer-card h3 {
   font-size: 1.1rem;
@@ -360,7 +362,6 @@ body {
   color: #666;
   margin: 0;
 }
-
 
 .slide-btn {
   position: absolute;
@@ -382,11 +383,11 @@ body {
 }
 
 .prev {
-  left: 10px;
+  left: 20px;
 }
 
 .next {
-  right: 10px;
+  right: 20px;
 }
 
 @media (max-width: 1024px) {
@@ -401,7 +402,7 @@ body {
 @media (max-width: 768px) {
   .officer-card {
     width: 220px;
-    margin: 0 10px;
+    margin: 0 8px;
   }
   .officer-card img {
     height: 240px;
@@ -426,8 +427,6 @@ body {
   }
 }
 
-
-
 .gallery-section {
   text-align: center;
   background: none;
@@ -437,14 +436,14 @@ body {
   margin: 0;
 }
 
-
-
+/* ACTIVITIES - Full Width */
 #activities {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
   text-align: center;
-  padding: 40px 20px 80px; 
+  padding: 40px 0 80px;
+  width: 100%;
 }
 
 #activities h2 {
@@ -453,21 +452,22 @@ body {
   color: maroon;
   font-weight: 700;
   letter-spacing: 1px;
+  padding: 0 20px;
 }
 
-
 .activity-list {
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: stretch;
   gap: 25px;
-  max-width: 1100px;
-  margin: 0 auto 60px; 
-  flex-wrap: wrap; 
+  width: 100%;
+  margin: 0 auto 60px;
+  flex-wrap: wrap;
+  padding: 0 20px;
 }
 
 .activity-card {
-  background-color: #f4e8d5; 
+  background-color: #f4e8d5;
   border-radius: 16px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
   width: 300px;
@@ -481,7 +481,6 @@ body {
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
 }
 
-
 .activity-card img {
   width: 100%;
   height: 220px;
@@ -493,7 +492,6 @@ body {
 .activity-card:hover img {
   transform: scale(1.05);
 }
-
 
 .activity-card h3 {
   font-size: 1.3rem;
@@ -509,7 +507,6 @@ body {
   line-height: 1.6;
 }
 
-
 @media (max-width: 900px) {
   .activity-list {
     flex-direction: column;
@@ -521,12 +518,13 @@ body {
   }
 }
 
-
+/* WHY CHOOSE US - Full Width */
 .why-choose-us {
   background-color: #f7f1e8;
   text-align: center;
-  padding: 70px 40px;
+  padding: 70px 0;
   font-family: 'Poppins', sans-serif;
+  width: 100%;
 }
 
 .why-choose-us h2 {
@@ -534,14 +532,16 @@ body {
   color: #3b2e25;
   font-weight: 700;
   margin-bottom: 10px;
+  padding: 0 20px;
 }
 
 .why-choose-us p {
   color: #7a6b61;
-  max-width: 750px;
+  width: 100%;
   margin: 0 auto 50px;
   line-height: 1.6;
   font-size: 1rem;
+  padding: 0 20px;
 }
 
 .benefit-cards {
@@ -550,6 +550,8 @@ body {
   gap: 30px;
   flex-wrap: wrap;
   perspective: 1000px;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .card {
@@ -607,61 +609,73 @@ body {
   transform: scale(1.05);
 }
 
+/* ABOUT - Full Width with Logo on Left, Vision/Mission on Right */
 #about {
   background-color: #f6e9da;
   padding: 60px 0;
   text-align: center;
+  width: 100%;
 }
 
 .about-us {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row; /* Changed to row for side-by-side layout */
+  justify-content: space-between; /* Space between logo and VM */
+  align-items: flex-start; /* Align items to top */
   gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: left; /* Changed to left alignment */
 }
 
 .logo-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start; /* Align logo to left */
+  align-items: flex-start;
+  width: 40%; /* Allocate 40% width for logo */
+  padding-top: 20px;
 }
 
 .big-logo {
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  object-fit: contain;
-  background-color: #ffffffcc; 
-  border: 6px solid #fff;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  width: 350px; /* Increased square size */
+  height: 350px; /* Increased square size */
+  border-radius: 25px; /* Curved edges for square */
+  object-fit: cover; /* Ensure image fills the square properly */
+  background-color: #ffffffcc;
+  border: 8px solid #fff; /* Slightly thicker border */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
   transition: transform 0.3s ease;
+  margin: 0; /* Remove auto margin for left alignment */
 }
 
 .big-logo:hover {
   transform: scale(1.05);
 }
 
-
 .vm-container {
   display: flex;
-  justify-content: center;
-  align-items: stretch; 
-  gap: 60px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;
+  width: 55%; /* Allocate 55% width for vision/mission */
+  text-align: left; /* Left align text */
 }
 
 .vision,
 .mission {
   background-color: #f3dcc2;
   border-radius: 15px;
-  padding: 30px 25px;
-  width: 380px;
-  min-height: 280px;
+  padding: 30px;
+  width: 100%; /* Full width of container */
+  min-height: 200px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: flex-start;
 }
 
 .vision:hover,
@@ -675,37 +689,46 @@ body {
   font-size: 1.8rem;
   margin-bottom: 15px;
   letter-spacing: 1px;
+  text-align: left; /* Left align headings */
 }
 
 .about-us p {
   color: #3b2c2c;
   font-size: 1rem;
   line-height: 1.6;
+  text-align: left; /* Left align paragraphs */
 }
 
-
+/* Mobile responsiveness for the new layout */
 @media (max-width: 900px) {
-  .vm-container {
-    flex-direction: row;
+  .about-us {
+    flex-direction: column; /* Stack vertically on mobile */
+    text-align: center;
+  }
+  
+  .logo-container {
+    width: 100%;
     justify-content: center;
-    align-items: stretch;
-    gap: 25px;
   }
-
-  .vision,
-  .mission {
-    width: 45%;
-    min-width: 250px;
-    min-height: 240px;
+  
+  .vm-container {
+    width: 100%;
+    text-align: center;
   }
-
+  
   .big-logo {
-    width: 150px;
-    height: 150px;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+  .about-us h2,
+  .about-us p {
+    text-align: center; /* Center text on mobile */
   }
 
   .why-choose-us {
-    padding: 50px 20px;
+    padding: 50px 0;
   }
 
   .why-choose-us h2 {
@@ -715,7 +738,7 @@ body {
   .why-choose-us p {
     font-size: 0.95rem;
     margin-bottom: 30px;
-    padding: 0 10px;
+    padding: 0 20px;
   }
 
   .benefit-cards {
@@ -729,45 +752,41 @@ body {
   }
 }
 
-
 @media (max-width: 600px) {
-  .vm-container {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 15px;
+  .big-logo {
+    width: 250px;
+    height: 250px;
   }
-
+  
   .vision,
   .mission {
-    width: 48%;
     padding: 20px 15px;
-    min-height: 220px;
+    min-height: auto;
   }
 }
 
-
-
-
+/* FOOTER - Full Width */
 footer {
   background-color: #0d0d0d;
   color: #f5f5f5;
-  padding: 50px 80px;
+  padding: 50px 0;
   font-family: 'Poppins', sans-serif;
   border-top: 3px solid #0f9d58;
+  width: 100%;
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: nowrap; 
+  flex-wrap: nowrap;
   gap: 60px;
   border-bottom: 1px solid #333;
   padding-bottom: 25px;
-  overflow-x: auto; 
+  overflow-x: auto;
+  width: 100%;
+  padding: 0 20px 25px;
 }
-
 
 .footer-left {
   flex: 1;
@@ -787,12 +806,12 @@ footer {
   font-size: 0.95rem;
 }
 
-
 .footer-links {
   display: flex;
   justify-content: space-between;
   flex: 2;
   gap: 60px;
+  width: 100%;
 }
 
 .footer-links div {
@@ -876,6 +895,8 @@ footer {
   margin-top: 25px;
   font-size: 0.9rem;
   flex-wrap: wrap;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .footer-bottom p {
@@ -892,7 +913,6 @@ footer {
 .footer-links-bottom a:hover {
   color: #0f9d58;
 }
-
 
 @media (max-width: 900px) {
   .footer-container {
