@@ -15,44 +15,35 @@ body {
   max-width: 100%;
 }
 
-/* NAVBAR - Full Width */
+
 .navbar {
   background: linear-gradient(90deg, maroon, black);
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 15px 40px;
   position: sticky;
   top: 0;
   z-index: 2000;
-  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  font-family: "Segoe UI", sans-serif;
 }
 
-.logo {
+.navbar * {
+  color: white;
+}
+
+
+.nav-left,
+.nav-right {
   display: flex;
   align-items: center;
+  gap: 25px;
 }
 
-.logo img {
-  height: 70px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.org-name {
-  font-weight: bold;
-  font-size: 1.4rem;
-  cursor: pointer;
-}
-
-.nav-links {
-  display: flex;
-  gap: 15px;
-}
-
-.nav-links a {
-  color: white;
+.nav-left a,
+.nav-right a {
   text-decoration: none;
   font-weight: 500;
   padding: 8px 14px;
@@ -60,42 +51,91 @@ body {
   transition: all 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-left a:hover,
+.nav-right a:hover,
+.nav-left a.active,
+.nav-right a.active {
   background-color: #e2a60e;
   color: black;
   transform: scale(1.05);
 }
 
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.org-name {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #e2a60e;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.org-name:hover {
+  color: #f8f3e4;
+  transform: scale(1.1);
+}
+
+
 .menu-toggle {
   display: none;
   font-size: 26px;
   cursor: pointer;
+  color: white;
 }
 
+
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
+  .navbar {
     flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background-color: #1c1c1c;
-    border-radius: 5px;
-    padding: 10px;
+    align-items: flex-start;
+    padding: 15px 20px;
   }
 
-  .nav-links.active {
+  .logo {
+    position: static;
+    transform: none;
+    align-self: center;
+    margin: 10px 0;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1c1c1c;
+    border-radius: 5px;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .nav-left.active,
+  .nav-right.active {
     display: flex;
   }
 
   .menu-toggle {
     display: block;
-    color: white;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  .nav-left a,
+  .nav-right a {
+    width: 100%;
+    padding: 10px;
   }
 }
 
-/* HEADER - Full Width */
+
+
 .main-header {
   position: relative;
   padding: 100px 0;
@@ -141,18 +181,18 @@ body {
 .header-content .big-logo {
   width: 220px;
   height: 220px;
-  border-radius: 20px; /* Curved edges for square */
+  border-radius: 20px; 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   margin-bottom: 15px;
   transition: transform 0.4s ease;
-  object-fit: cover; /* Ensure image fills the square properly */
+  object-fit: cover; 
 }
 
 .header-content .big-logo:hover {
   transform: scale(1.05);
 }
 
-/* Text Styling */
+
 .header-content h1 {
   font-size: 3rem;
   letter-spacing: 2px;
@@ -232,15 +272,15 @@ body {
 }
 
 .big-logo {
-  width: 300px; /* Square dimensions */
-  height: 300px; /* Square dimensions */
-  border-radius: 25px; /* Curved edges for square */
+  width: 300px; 
+  height: 300px; 
+  border-radius: 25px; 
   background: #fff;
   margin-bottom: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
   transform: translateZ(40px);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  object-fit: cover; /* Ensure image fills the square properly */
+  object-fit: cover; 
 }
 
 .big-logo:hover {
@@ -291,7 +331,7 @@ body {
   }
 }
 
-/* OFFICERS - Full Width */
+
 #officers {
   text-align: center;
   padding: 60px 0;
@@ -436,7 +476,7 @@ body {
   margin: 0;
 }
 
-/* ACTIVITIES - Full Width */
+
 #activities {
   background: transparent !important;
   border: none !important;
@@ -518,7 +558,7 @@ body {
   }
 }
 
-/* WHY CHOOSE US - Full Width */
+
 .why-choose-us {
   background-color: #f7f1e8;
   text-align: center;
@@ -609,7 +649,7 @@ body {
   transform: scale(1.05);
 }
 
-/* ABOUT - Full Width with Logo on Left, Vision/Mission on Right */
+
 #about {
   background-color: #f6e9da;
   padding: 60px 0;
@@ -619,35 +659,35 @@ body {
 
 .about-us {
   display: flex;
-  flex-direction: row; /* Changed to row for side-by-side layout */
-  justify-content: space-between; /* Space between logo and VM */
-  align-items: flex-start; /* Align items to top */
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: flex-start; 
   gap: 40px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  text-align: left; /* Changed to left alignment */
+  text-align: left; 
 }
 
 .logo-container {
   display: flex;
-  justify-content: flex-start; /* Align logo to left */
+  justify-content: flex-start; 
   align-items: flex-start;
-  width: 40%; /* Allocate 40% width for logo */
+  width: 40%; 
   padding-top: 20px;
 }
 
 .big-logo {
-  width: 350px; /* Increased square size */
-  height: 350px; /* Increased square size */
-  border-radius: 25px; /* Curved edges for square */
-  object-fit: cover; /* Ensure image fills the square properly */
+  width: 350px; 
+  height: 350px;
+  border-radius: 25px; 
+  object-fit: cover; 
   background-color: #ffffffcc;
-  border: 8px solid #fff; /* Slightly thicker border */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  border: 8px solid #fff; 
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); 
   transition: transform 0.3s ease;
-  margin: 0; /* Remove auto margin for left alignment */
+  margin: 0; 
 }
 
 .big-logo:hover {
@@ -660,11 +700,11 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 40px;
-  width: 55%; /* Allocate 55% width for vision/mission */
-  text-align: left; /* Left align text */
+  width: 55%; 
+  text-align: left; 
 }
 
-/* Enhanced Vision and Mission Sections with Technology Background */
+
 .vision,
 .mission {
   background: 
@@ -732,7 +772,7 @@ body {
   background: linear-gradient(90deg, #A52A2A, #8B0000, #A52A2A);
 }
 
-/* Circuit board pattern overlay */
+
 .vision .circuit-overlay,
 .mission .circuit-overlay {
   position: absolute;
@@ -746,7 +786,7 @@ body {
   z-index: 0;
 }
 
-/* Content styling to appear above background */
+
 .vision h2,
 .mission h2,
 .vision p,
@@ -755,7 +795,7 @@ body {
   z-index: 2;
 }
 
-/* Specific styling for Vision section */
+
 .vision {
   background: 
     linear-gradient(135deg, #f3dcc2 0%, #e8d7c0 100%),
@@ -763,7 +803,7 @@ body {
   background-size: cover, 300px 300px;
 }
 
-/* Specific styling for Mission section */
+
 .mission {
   background: 
     linear-gradient(135deg, #f3dcc2 0%, #e6d2b4 100%),
@@ -771,7 +811,7 @@ body {
   background-size: cover, 250px 250px;
 }
 
-/* Enhanced text styling for better readability */
+
 .vision h2,
 .mission h2 {
   color: #4b1e1e;
@@ -804,7 +844,7 @@ body {
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
 }
 
-/* Mobile responsiveness */
+
 @media (max-width: 900px) {
   .vision,
   .mission {
@@ -847,20 +887,20 @@ body {
   font-size: 1.8rem;
   margin-bottom: 15px;
   letter-spacing: 1px;
-  text-align: left; /* Left align headings */
+  text-align: left; 
 }
 
 .about-us p {
   color: #3b2c2c;
   font-size: 1rem;
   line-height: 1.6;
-  text-align: left; /* Left align paragraphs */
+  text-align: left; 
 }
 
-/* Mobile responsiveness for the new layout */
+
 @media (max-width: 900px) {
   .about-us {
-    flex-direction: column; /* Stack vertically on mobile */
+    flex-direction: column; 
     text-align: center;
   }
   
@@ -882,7 +922,7 @@ body {
 
   .about-us h2,
   .about-us p {
-    text-align: center; /* Center text on mobile */
+    text-align: center; 
   }
 
   .why-choose-us {
@@ -923,7 +963,7 @@ body {
   }
 }
 
-/* FOOTER - Full Width */
+
 footer {
   background-color: #0d0d0d;
   color: #f5f5f5;
@@ -1045,7 +1085,7 @@ footer {
   background-color: #13b266;
 }
 
-/* BOTTOM SECTION */
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -1152,7 +1192,7 @@ footer {
             background-color: #a00000;
         }
 
-        /* Responsive adjustments */
+
         @media (max-width: 1100px) {
             .container {
                 flex-direction: column;
@@ -1188,7 +1228,7 @@ footer {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #1877f2; /* Facebook blue */
+  background-color: #1877f2; 
   color: white;
   border-radius: 50%;
   font-size: 20px;

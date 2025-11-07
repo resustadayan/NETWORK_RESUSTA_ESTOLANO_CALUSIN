@@ -12,19 +12,23 @@
   <body>
 
     <nav class="navbar">
-      <div class="logo">
-        <span class="org-name" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">NETWORK</span>
+  <div class="nav-left">
+    <a href="#top"><strong>Home</strong></a>
+    <a href="#about"><strong>About Us</strong></a>
+    <a href="#officers"><strong>Officers</strong></a>
+  </div>
 
-      </div>
-      <div class="menu-toggle" id="toggleMenu()">☰</div>
-      <div class="nav-links" id="navLinks">
-        <a href="#top">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#officers">Officers</a>
-        <a href="#activities">Activities</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+  <div class="logo">
+    <span class="org-name" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">NETWORK</span>
+  </div>
+
+  <div class="nav-right">
+    <a href="#activities"><strong>Activities</strong></a>
+    <a href="#contact"><strong>Contact</strong></a>
+  </div>
+
+  <div class="menu-toggle" id="menuToggle">☰</div>
+</nav>
 
 <header class="main-header" id="top">
   <div class="header-overlay"></div>
@@ -288,8 +292,12 @@
 </footer>
 
 <script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    navLinks.classList.toggle("active");
-  }
+  const menuToggle = document.getElementById("menuToggle");
+  const navLeft = document.querySelector(".nav-left");
+  const navRight = document.querySelector(".nav-right");
+
+  menuToggle.addEventListener("click", () => {
+    navLeft.classList.toggle("active");
+    navRight.classList.toggle("active");
+  });
 </script>
