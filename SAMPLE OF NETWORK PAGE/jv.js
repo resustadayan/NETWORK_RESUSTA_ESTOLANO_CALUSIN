@@ -13,11 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
           behavior: "smooth"
         });
       }
+      
+      // Close mobile menu after clicking a link
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.remove("active");
     });
   });
 
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
 
   if (menuToggle) {
     menuToggle.addEventListener("click", () => {
@@ -32,6 +36,9 @@ let currentIndex = 0;
 function moveSlide(direction) {
   const slider = document.getElementById('slider');
   const cards = document.querySelectorAll('.officer-card');
+  
+  if (cards.length === 0) return;
+  
   const cardWidth = cards[0].offsetWidth + 30; // includes margin
   const totalCards = cards.length;
 
@@ -54,5 +61,8 @@ setInterval(() => moveSlide(1), 5000);
 // Recalculate on resize
 window.addEventListener('resize', () => {
   currentIndex = 0;
-  document.getElementById('slider').style.transform = 'translateX(0)';
+  const slider = document.getElementById('slider');
+  if (slider) {
+    slider.style.transform = 'translateX(0)';
+  }
 });
