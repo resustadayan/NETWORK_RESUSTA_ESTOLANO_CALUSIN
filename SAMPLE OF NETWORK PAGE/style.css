@@ -12,14 +12,12 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
 }
-
-..navbar {
+.navbar {
   background: linear-gradient(90deg, maroon, black);
   color: white;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 40px; /* space between logo and groups */
   padding: 15px 40px;
   position: sticky;
   top: 0;
@@ -28,23 +26,20 @@ body {
   font-family: "Segoe UI", sans-serif;
 }
 
-/* left and right groups */
-.nav-group {
+/* Make sure the navbar is always visible */
+.navbar * {
+  color: white;
+}
+
+/* Left and right navigation groups */
+.nav-left,
+.nav-right {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 25px;
 }
 
-/* make sure left and right are equally spaced */
-.nav-left {
-  margin-right: auto;
-}
-
-.nav-right {
-  margin-left: auto;
-}
-
-/* logo perfectly centered */
+/* Center logo */
 .logo {
   position: absolute;
   left: 50%;
@@ -54,7 +49,7 @@ body {
 .logo .org-name {
   font-size: 1.5rem;
   font-weight: normal;
-  color: #fff;
+  color: white;
   letter-spacing: 1.5px;
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -65,11 +60,11 @@ body {
   transform: scale(1.08);
 }
 
-/* link styles */
+/* Link styles */
 .navbar a {
   font-size: 1.1rem;
   font-weight: normal;
-  color: #fff;
+  color: white;
   text-decoration: none;
   letter-spacing: 1px;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -80,18 +75,18 @@ body {
   transform: scale(1.05);
 }
 
-/* mobile menu */
+/* Mobile menu toggle */
 .menu-toggle {
   display: none;
   font-size: 28px;
   cursor: pointer;
   color: white;
-  position: absolute;
-  right: 20px;
 }
 
+/* Responsive (mobile) */
 @media (max-width: 768px) {
-  .nav-group {
+  .nav-left,
+  .nav-right {
     display: none;
   }
 
@@ -99,7 +94,8 @@ body {
     display: block;
   }
 
-  .navbar.active .nav-group {
+  .navbar.active .nav-left,
+  .navbar.active .nav-right {
     display: flex;
     flex-direction: column;
     position: absolute;
