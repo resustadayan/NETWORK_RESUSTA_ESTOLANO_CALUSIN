@@ -557,21 +557,190 @@ body {
   flex-wrap: wrap;
 }
 
+/* Enhanced Vision and Mission Sections with Technology Background */
 .vision,
 .mission {
-  background-color: #f3dcc2;
+  background: 
+    linear-gradient(135deg, #f3dcc2 0%, #e6d2b4 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M20,20 L80,20 L80,80 L20,80 Z' fill='none' stroke='%238B0000' stroke-width='2' stroke-dasharray='5,5'/%3E%3Ccircle cx='50' cy='50' r='15' fill='none' stroke='%238B0000' stroke-width='1.5'/%3E%3Cpath d='M35,35 L65,65 M65,35 L35,65' stroke='%238B0000' stroke-width='1'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Crect x='10' y='10' width='8' height='8' fill='%238B0000' opacity='0.3'/%3E%3Crect x='25' y='10' width='8' height='8' fill='%238B0000' opacity='0.3'/%3E%3Crect x='40' y='10' width='8' height='8' fill='%238B0000' opacity='0.3'/%3E%3Ccircle cx='15' cy='35' r='3' fill='%238B0000' opacity='0.3'/%3E%3Ccircle cx='30' cy='35' r='3' fill='%238B0000' opacity='0.3'/%3E%3Ccircle cx='45' cy='35' r='3' fill='%238B0000' opacity='0.3'/%3E%3C/svg%3E");
+  background-size: cover, 200px 200px, 100px 100px;
+  background-position: center, center, top left;
   border-radius: 15px;
+<<<<<<< HEAD
   padding: 30px 25px;
   width: 380px;
   min-height: 260px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+=======
+  padding: 30px;
+  width: 100%;
+  min-height: 200px;
+  box-shadow: 
+    0 6px 18px rgba(0, 0, 0, 0.12),
+    inset 0 0 0 1px rgba(139, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  background-blend-mode: overlay, normal, normal;
+}
+
+.vision::before,
+.mission::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8B0000, #A52A2A, #8B0000);
+  z-index: 1;
+}
+
+.vision::after,
+.mission::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  background: 
+    radial-gradient(circle at 30px 30px, rgba(139, 0, 0, 0.1) 0%, transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M15,15 L25,15 L25,25 L15,25 Z M35,15 L45,15 L45,25 L35,25 Z M15,35 L25,35 L25,45 L15,45 Z M35,35 L45,35 L45,45 L35,45 Z' fill='none' stroke='%238B0000' stroke-width='1' opacity='0.5'/%3E%3Cline x1='30' y1='5' x2='30' y2='15' stroke='%238B0000' stroke-width='1' opacity='0.5'/%3E%3Cline x1='30' y1='45' x2='30' y2='55' stroke='%238B0000' stroke-width='1' opacity='0.5'/%3E%3C/svg%3E");
+  background-size: cover, contain;
+  opacity: 0.6;
+  z-index: 0;
+>>>>>>> 3a44aeb34605b718936eb6070eb88a93e10bcf96
 }
 
 .vision:hover,
 .mission:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.18),
+    inset 0 0 0 1px rgba(139, 0, 0, 0.2);
+  border-color: rgba(139, 0, 0, 0.3);
+}
+
+.vision:hover::before,
+.mission:hover::before {
+  background: linear-gradient(90deg, #A52A2A, #8B0000, #A52A2A);
+}
+
+/* Circuit board pattern overlay */
+.vision .circuit-overlay,
+.mission .circuit-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M5,5 L15,5 L15,15 L5,15 Z M25,5 L35,5 L35,15 L25,15 Z M5,25 L15,25 L15,35 L5,35 Z M25,25 L35,25 L35,35 L25,35 Z' fill='none' stroke='%238B0000' stroke-width='0.5' opacity='0.2'/%3E%3Cline x1='20' y1='0' x2='20' y2='5' stroke='%238B0000' stroke-width='0.5' opacity='0.2'/%3E%3Cline x1='20' y1='15' x2='20' y2='25' stroke='%238B0000' stroke-width='0.5' opacity='0.2'/%3E%3Cline x1='20' y1='35' x2='20' y2='40' stroke='%238B0000' stroke-width='0.5' opacity='0.2'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* Content styling to appear above background */
+.vision h2,
+.mission h2,
+.vision p,
+.mission p {
+  position: relative;
+  z-index: 2;
+}
+
+/* Specific styling for Vision section */
+.vision {
+  background: 
+    linear-gradient(135deg, #f3dcc2 0%, #e8d7c0 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M30,30 L50,30 L50,50 L30,50 Z M70,30 L90,30 L90,50 L70,50 Z M30,70 L50,70 L50,90 L30,90 Z M70,70 L90,70 L90,90 L70,90 Z' fill='none' stroke='%238B0000' stroke-width='2' opacity='0.1'/%3E%3Ccircle cx='60' cy='60' r='20' fill='none' stroke='%238B0000' stroke-width='1.5' opacity='0.1'/%3E%3C/svg%3E");
+  background-size: cover, 300px 300px;
+}
+
+/* Specific styling for Mission section */
+.mission {
+  background: 
+    linear-gradient(135deg, #f3dcc2 0%, #e6d2b4 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M10,20 L30,20 L30,40 L10,40 Z M40,20 L60,20 L60,40 L40,40 Z M70,20 L90,20 L90,40 L70,40 Z M10,60 L30,60 L30,80 L10,80 Z M40,60 L60,60 L60,80 L40,80 Z M70,60 L90,60 L90,80 L70,80 Z' fill='none' stroke='%238B0000' stroke-width='1.5' opacity='0.1'/%3E%3Cline x1='20' y1='0' x2='20' y2='20' stroke='%238B0000' stroke-width='1' opacity='0.1'/%3E%3Cline x1='50' y1='0' x2='50' y2='20' stroke='%238B0000' stroke-width='1' opacity='0.1'/%3E%3Cline x1='80' y1='0' x2='80' y2='20' stroke='%238B0000' stroke-width='1' opacity='0.1'/%3E%3C/svg%3E");
+  background-size: cover, 250px 250px;
+}
+
+/* Enhanced text styling for better readability */
+.vision h2,
+.mission h2 {
+  color: #4b1e1e;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-align: left;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  position: relative;
+  display: inline-block;
+}
+
+.vision h2::after,
+.mission h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, #8B0000, transparent);
+}
+
+.vision p,
+.mission p {
+  color: #3b2c2c;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 900px) {
+  .vision,
+  .mission {
+    padding: 20px 15px;
+    min-height: auto;
+    background-size: cover, 150px 150px, 80px 80px;
+  }
+  
+  .vision h2,
+  .mission h2,
+  .vision p,
+  .mission p {
+    text-align: center;
+  }
+  
+  .vision h2::after,
+  .mission h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .vision,
+  .mission {
+    padding: 15px 10px;
+  }
+  
+  .vision::after,
+  .mission::after {
+    width: 40px;
+    height: 40px;
+    bottom: 5px;
+    right: 5px;
+  }
 }
 
 .about-us h2 {
@@ -739,8 +908,113 @@ footer {
     gap: 10px;
     text-align: center;
   }
+<<<<<<< HEAD
   
   footer {
     padding: 30px 20px;
   }
+=======
+}
+
+.join-us {
+            position: fixed;
+            top: 120px;
+            right: 40px;
+            width: 320px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+            padding: 1.5rem;
+            z-index: 1000;
+        }
+
+        .join-us h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: maroon;
+            font-weight: bold;
+        }
+
+        .join-us form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .join-us label {
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+
+        .join-us input,
+        .join-us select {
+            margin-bottom: 1rem;
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .join-us button {
+            background-color: maroon;
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .join-us button:hover {
+            background-color: #a00000;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1100px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .join-us {
+                position: static;
+                width: 90%;
+                margin: 2rem auto;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .main-content {
+                padding: 15px;
+            }
+            
+            .join-us {
+                width: 100%;
+                padding: 1rem;
+                border-radius: 0;
+            }
+        }
+
+.facebook-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #1877f2; /* Facebook blue */
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.facebook-icon:hover {
+  background-color: #0d65d9;
+  transform: scale(1.1);
+>>>>>>> 3a44aeb34605b718936eb6070eb88a93e10bcf96
 }
