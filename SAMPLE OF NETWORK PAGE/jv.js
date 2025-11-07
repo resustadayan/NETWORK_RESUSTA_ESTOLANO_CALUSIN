@@ -56,3 +56,18 @@ window.addEventListener('resize', () => {
   currentIndex = 0;
   document.getElementById('slider').style.transform = 'translateX(0)';
 });
+
+document.getElementById('joinForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const year = document.getElementById('year').value;
+            
+            // Simple validation
+            if (name && email && year) {
+                alert(`Thank you, ${name}! We've received your application. We'll contact you at ${email}.`);
+                document.getElementById('joinForm').reset();
+            }
+        });
