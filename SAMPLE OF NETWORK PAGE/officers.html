@@ -1,0 +1,197 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NETWORK</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <script defer src="jv.js"></script>
+  </head>
+  
+  <body>
+
+    <nav class="navbar">
+  <div class="nav-left">
+    <a href="#top"><strong>Home</strong></a>
+    <a href="#about"><strong>About Us</strong></a>
+    <a href="#officers"><strong>Officers</strong></a>
+  </div>
+
+  <div class="logo">
+    <span class="org-name" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">NETWORK</span>
+  </div>
+
+  <div class="nav-right">
+    <a href="#activities"><strong>Activities</strong></a>
+    <a href="#contact"><strong>Contact</strong></a>
+  </div>
+
+  <div class="menu-toggle" id="menuToggle">☰</div>
+</nav>
+ <section id="officers">
+          <h2>Meet Our Officers</h2>
+
+          <div class="slider-container">
+            <div class="slider" id="slider">
+              <div class="officer-card" data-name="ZEANNA PATRICIA D. CALUSIN" data-age="age" data-position="President" data-social="facebook.com">
+                <img src="./pics/president.jpg" alt="Officer 1" onclick="showOfficerDetails(this)">
+              </div>
+
+              <div class="officer-card" data-name="JOHN PAULO L. MANUEL" data-age="age" data-position="Vice President" data-social="facebook.com">
+                <img src="./pics/vice pres.jpg" alt="Officer 2" onclick="showOfficerDetails(this)">
+            </div>
+
+            <div class="officer-card" data-name="JESSA MAE R. PINES" data-age="age" data-position="Secretary" data-social="facebook.com">
+              <img src="./pics/secretary.jpg" alt="Officer 3" onclick="showOfficerDetails(this)">
+            </div> 
+
+            <div class="officer-card" data-name="ARRONE B. CAAGBAY" data-age="age" data-position="Treasurer" data-social="facebook.com">
+              <img src="./pics/treasurer.jpg" alt="Officer 4" onclick="showOfficerDetails(this)">
+            </div>
+
+            <div class="officer-card" data-name="ANGELICA S. AGUILA" data-age="age" data-position="Auditor" data-social="facebook.com">
+              <img src="./pics/auditor.jpg" alt="Officer 5" onclick="showOfficerDetails(this)">
+            </div>
+
+            <div class="officer-card" data-name="JONA M. TAN" data-age="age" data-position="Layout Artist" data-social="facebook.com">
+              <img src="./pics/layout.jpg" alt="Officer 6" onclick="showOfficerDetails(this)">
+            </div>
+
+            <div class="officer-card" data-name="ASHLEY NICOLE G. YUBION" data-age="age" data-position="2nd Year Representative" data-social="facebook.com">
+              <img src="./pics/2nd.jpg" alt="Officer 7" onclick="showOfficerDetails(this)">
+          </div>
+
+          <div class="officer-card" data-name="MARISSA M. FAMADULAN" data-age="age" data-position="3rd Year Representative" data-social="facebook.com">
+            <img src="./pics/3rd.jpg" alt="Officer 8" onclick="showOfficerDetails(this)">
+          </div>
+
+          <div class="officer-card" data-name="RUSSEL KEN D. RUEDAS" data-age="age" data-position="4th Year Representative" data-social="facebook.com">
+            <img src="./pics/4th.jpg" alt="Officer 9" onclick="showOfficerDetails(this)">
+          </div>
+
+          <div class="officer-card" data-name="DEN MARK R. LADEZA" data-age="age" data-position="Project Manager" data-social="facebook.com">
+            <img src="./pics/project manager.jpg" alt="Officer 10" onclick="showOfficerDetails(this)">
+        </div>
+
+        <div class="officer-card" data-name="JOHN RICK R. VILLENA" data-age="age" data-position="Sports" data-social="facebook.com">
+          <img src="./pics/sports.jpg" alt="Officer 11" onclick="showOfficerDetails(this)">
+        </div>
+
+        <div class="officer-card" data-name="ARIEL JAKE MARAYA" data-age="age" data-position=" Gender and Development" data-social="facebook.com">
+          <img src="./pics/GAD.jpg" alt="Officer 12" onclick="showOfficerDetails(this)">
+        </div>
+
+        <div class="officer-card" data-name="PRICESS NICOLE V. QUEJANO" data-age="age" data-position="Legal Matters" data-social="facebook.com">
+          <img src="./pics/legal matters.jpg" alt="Officer 13" onclick="showOfficerDetails(this)">
+        </div>
+      </div>
+
+      <button class="slide-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="slide-btn next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    </section> 
+
+    <aside class="join-us" id="joinUsBox">
+      <div class="join-header" onclick="toggleJoinForm()">
+      <h2>Join Us</h2>
+      <span class="arrow" id="arrow">&#9662;</span>
+      </div>
+
+      <form id="joinForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="year">Year Level</label>
+        <select id="year" name="year" required>
+          <option value="">Select Year</option>
+          <option value="1st">1st Year</option>
+          <option value="2nd">2nd Year</option>
+          <option value="3rd">3rd Year</option>
+          <option value="4th">4th Year</option>
+        </select>
+
+        <button type="submit">Join Now</button>
+      </form>
+    </aside>
+
+    <footer id="contact">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h3>Empowering Students, Powering Technology.</h3>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> support@bitcourse.com</p>
+        <p><i class="fas fa-phone"></i> 1800-1234-5678</p>
+        <a href="https://www.facebook.com/profile.php?id=61551892495218" target="_blank" 
+          class="facebook-icon">
+          <i class="fab fa-facebook-f"></i>
+      </a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#officers">Officers</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Leadership Center</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-subscribe">
+        <h4>Get In Touch!</h4>
+        <form>
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 NETWORK Organization | Developed for Student Leadership</p>
+    <div class="footer-links-bottom">
+      <a href="#">Privacy</a>
+      <a href="#">Terms & Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navLeft = document.querySelector(".nav-left");
+  const navRight = document.querySelector(".nav-right");
+
+  menuToggle.addEventListener("click", () => {
+    navLeft.classList.toggle("active");
+    navRight.classList.toggle("active");
+  });
+
+  // --- join us form arrow ---
+  function toggleJoinForm() {
+  const form = document.getElementById('joinForm');
+  const arrow = document.getElementById('arrow');
+
+  form.classList.toggle('hidden');
+  arrow.classList.toggle('rotate');
+}
+</script>

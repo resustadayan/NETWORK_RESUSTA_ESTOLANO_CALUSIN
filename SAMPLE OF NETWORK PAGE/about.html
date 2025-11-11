@@ -1,0 +1,177 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NETWORK</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <script defer src="jv.js"></script>
+  </head>
+  
+  <body>
+
+    <nav class="navbar">
+  <div class="nav-left">
+    <a href="#top"><strong>Home</strong></a>
+    <a href="#about"><strong>About Us</strong></a>
+    <a href="#officers"><strong>Officers</strong></a>
+  </div>
+
+  <div class="logo">
+    <span class="org-name" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">NETWORK</span>
+  </div>
+
+  <div class="nav-right">
+    <a href="#activities"><strong>Activities</strong></a>
+    <a href="#contact"><strong>Contact</strong></a>
+  </div>
+
+  <div class="menu-toggle" id="menuToggle">☰</div>
+</nav>  
+    <main class="main">
+      <section class="why-choose-us">
+        <h2>Why Join NETWORK?</h2>
+        <p>
+          NETWORK is an organization exclusively for BIT students —
+           fostering collaboration, leadership, and innovation through teamwork, seminars, 
+           and hands-on learning experiences.
+        </p>
+
+        <section id="about">
+  <div class="about-us">
+    <div class="logo-container">
+      <img
+        src="../SAMPLE OF NETWORK PAGE/pics/Logo.jpg"
+        alt="NETWORK Logo"
+        class="big-logo"
+      />
+    </div>
+
+    <div class="vm-container">
+      <div class="vision">
+        <div class="circuit-overlay"></div>
+        <h2>VISION</h2>
+        <p>
+          NETWORK envisions an inclusive community that empowers students in
+          technology-related fields. We aim to create a welcoming and creative
+          atmosphere where learners grow into leaders, innovators, and team players
+          ready to face challenges in today's fast-changing world.
+        </p>
+      </div>
+
+      <div class="mission">
+        <div class="circuit-overlay"></div>
+        <h2>MISSION</h2>
+        <p>
+          By promoting curiosity, growth, and collaboration, we seek to mold a
+          generation that uses technology to bring about positive change while
+          working toward a common goal.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h3>Empowering Students, Powering Technology.</h3>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> support@bitcourse.com</p>
+        <p><i class="fas fa-phone"></i> 1800-1234-5678</p>
+        <a href="https://www.facebook.com/profile.php?id=61551892495218" target="_blank" 
+          class="facebook-icon">
+          <i class="fab fa-facebook-f"></i>
+      </a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#officers">Officers</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Leadership Center</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-subscribe">
+        <h4>Get In Touch!</h4>
+        <form>
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <aside class="join-us" id="joinUsBox">
+      <div class="join-header" onclick="toggleJoinForm()">
+      <h2>Join Us</h2>
+      <span class="arrow" id="arrow">&#9662;</span>
+      </div>
+
+      <form id="joinForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="year">Year Level</label>
+        <select id="year" name="year" required>
+          <option value="">Select Year</option>
+          <option value="1st">1st Year</option>
+          <option value="2nd">2nd Year</option>
+          <option value="3rd">3rd Year</option>
+          <option value="4th">4th Year</option>
+        </select>
+
+        <button type="submit">Join Now</button>
+      </form>
+    </aside>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 NETWORK Organization | Developed for Student Leadership</p>
+    <div class="footer-links-bottom">
+      <a href="#">Privacy</a>
+      <a href="#">Terms & Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navLeft = document.querySelector(".nav-left");
+  const navRight = document.querySelector(".nav-right");
+
+  menuToggle.addEventListener("click", () => {
+    navLeft.classList.toggle("active");
+    navRight.classList.toggle("active");
+  });
+
+  // --- join us form arrow ---
+  function toggleJoinForm() {
+  const form = document.getElementById('joinForm');
+  const arrow = document.getElementById('arrow');
+
+  form.classList.toggle('hidden');
+  arrow.classList.toggle('rotate');
+}
+</script>
