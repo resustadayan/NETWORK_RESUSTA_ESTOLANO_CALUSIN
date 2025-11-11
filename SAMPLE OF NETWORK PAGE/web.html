@@ -94,82 +94,56 @@
 
           <div class="slider-container">
             <div class="slider" id="slider">
-              <div class="officer-card">
-                <img src="./pics/president.jpg" alt="Officer 1">
-                <h3>ZEANNA PATRICIA CALUSIN</h3>
-                <p>President</p>
+              <div class="officer-card" data-name="ZEANNA PATRICIA D. CALUSIN" data-age="age" data-position="President" data-social="facebook.com">
+                <img src="./pics/president.jpg" alt="Officer 1" onclick="showOfficerDetails(this)">
               </div>
 
-              <div class="officer-card">
-                <img src="./pics/vice pres.jpg" alt="Officer 2">
-                <h3>JOHN PAULO MANUEL</h3>
-                <p>Vice President</p>
+              <div class="officer-card" data-name="JOHN PAULO L. MANUEL" data-age="age" data-position="Vice President" data-social="facebook.com">
+                <img src="./pics/vice pres.jpg" alt="Officer 2" onclick="showOfficerDetails(this)">
             </div>
 
-            <div class="officer-card">
-              <img src="./pics/secretary.jpg" alt="Officer 3">
-              <h3>JESSA MAE PINES</h3>
-              <p>Secretary</p>
+            <div class="officer-card" data-name="JESSA MAE R. PINES" data-age="age" data-position="Secretary" data-social="facebook.com">
+              <img src="./pics/secretary.jpg" alt="Officer 3" onclick="showOfficerDetails(this)">
             </div> 
 
-            <div class="officer-card">
-              <img src="./pics/treasurer.jpg" alt="Officer 4">
-              <h3>ARRONE CAAGBAY</h3>
-              <p>Treasurer </p>
+            <div class="officer-card" data-name="ARRONE B. CAAGBAY" data-age="age" data-position="Treasurer" data-social="facebook.com">
+              <img src="./pics/treasurer.jpg" alt="Officer 4" onclick="showOfficerDetails(this)">
             </div>
 
-            <div class="officer-card">
-              <img src="./pics/auditor.jpg" alt="Officer 5">
-              <h3>ANGELICA AGUILA</h3>
-              <p>Auditor</p>
+            <div class="officer-card" data-name="ANGELICA S. AGUILA" data-age="age" data-position="Auditor" data-social="facebook.com">
+              <img src="./pics/auditor.jpg" alt="Officer 5" onclick="showOfficerDetails(this)">
             </div>
 
-            <div class="officer-card">
-              <img src="./pics/layout.jpg" alt="Officer 6">
-              <h3>JONA TAN</h3>
-              <p>Layout Artist</p>
+            <div class="officer-card" data-name="JONA M. TAN" data-age="age" data-position="Layout Artist" data-social="facebook.com">
+              <img src="./pics/layout.jpg" alt="Officer 6" onclick="showOfficerDetails(this)">
             </div>
 
-            <div class="officer-card">
-              <img src="./pics/2nd.jpg" alt="Officer 7">
-              <h3>ASHLEY NICOLE YUBION</h3>
-              <p>2nd Year Representative</p>
+            <div class="officer-card" data-name="ASHLEY NICOLE G. YUBION" data-age="age" data-position="2nd Year Representative" data-social="facebook.com">
+              <img src="./pics/2nd.jpg" alt="Officer 7" onclick="showOfficerDetails(this)">
           </div>
 
-          <div class="officer-card">
-            <img src="./pics/3rd.jpg" alt="Officer 8">
-            <h3>MARISSA FAMADULAN</h3>
-            <p>3rd Year Representative</p>
+          <div class="officer-card" data-name="MARISSA M. FAMADULAN" data-age="age" data-position="3rd Year Representative" data-social="facebook.com">
+            <img src="./pics/3rd.jpg" alt="Officer 8" onclick="showOfficerDetails(this)">
           </div>
 
-          <div class="officer-card">
-            <img src="./pics/4th.jpg" alt="Officer 9">
-            <h3>RUSSEL KEN RUEDAS</h3>
-            <p>4th Year Representative</p>
+          <div class="officer-card" data-name="RUSSEL KEN D. RUEDAS" data-age="age" data-position="4th Year Representative" data-social="facebook.com">
+            <img src="./pics/4th.jpg" alt="Officer 9" onclick="showOfficerDetails(this)">
           </div>
 
-          <div class="officer-card">
-            <img src="./pics/project manager.jpg" alt="Officer 10">
-            <h3>DEN MARK LADEZA</h3>
-            <p>Projet Manager</p>
+          <div class="officer-card" data-name="DEN MARK R. LADEZA" data-age="age" data-position="Project Manager" data-social="facebook.com">
+            <img src="./pics/project manager.jpg" alt="Officer 10" onclick="showOfficerDetails(this)">
         </div>
 
-        <div class="officer-card">
-          <img src="./pics/sports.jpg" alt="Officer 11">
-          <h3>JOHN RICK VILLENA</h3>
-          <p>Sports</p>
+        <div class="officer-card" data-name="JOHN RICK R. VILLENA" data-age="age" data-position="Sports" data-social="facebook.com">
+          <img src="./pics/sports.jpg" alt="Officer 11" onclick="showOfficerDetails(this)">
         </div>
 
-        <div class="officer-card">
-          <img src="./pics/GAD.jpg" alt="Officer 12">
-          <h3>ARIEL JAKE MARAYA</h3>
-          <p>Gender and Development</p>
+        <div class="officer-card" data-name="ARIEL JAKE MARAYA" data-age="age" data-position=" Gender and Development" data-social="facebook.com">
+          <img src="./pics/GAD.jpg" alt="Officer 12" onclick="showOfficerDetails(this)">
         </div>
 
-        <div class="officer-card">
-          <img src="./pics/legal matters.jpg" alt="Officer 13">
-          <h3>PRICESS NICOLE QUEJANO</h3>
-          <p>Legal Matters</p>
+        <div class="officer-card" data-name="PRICESS NICOLE V. QUEJANO" data-age="age" data-position="Legal Matters" data-social="facebook.com">
+          <img src="./pics/legal matters.jpg" alt="Officer 13" onclick="showOfficerDetails(this)">
         </div>
       </div>
 
@@ -177,6 +151,21 @@
       <button class="slide-btn next" onclick="moveSlide(1)">&#10095;</button>
     </div>
     </section> 
+
+    <div class="officer-modal" id="officerModal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeOfficerModal()">&times;</span>
+    <div class="modal-body">
+      <img id="modalImage" src="" alt="Officer Image">
+      <div class="modal-details">
+        <h3 id="modalName"></h3>
+        <p><strong>Age:</strong> <span id="modalAge"></span></p>
+        <p><strong>Position:</strong> <span id="modalPosition"></span></p>
+        <a id="modalSocial" href="#" target="_blank">View Facebook</a>
+      </div>
+    </div>
+  </div>
+</div>
 
       <section id="activities">
         <div class="benefit-cards">
@@ -210,8 +199,12 @@
   </section>
     </main>
 
-    <aside class="join-us">
+    <aside class="join-us" id="joinUsBox">
+      <div class="join-header" onclick="toggleJoinForm()">
       <h2>Join Us</h2>
+      <span class="arrow" id="arrow">&#9662;</span>
+      </div>
+
       <form id="joinForm">
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" required />
@@ -239,8 +232,7 @@
       <div class="contact-info">
         <p><i class="fas fa-envelope"></i> support@bitcourse.com</p>
         <p><i class="fas fa-phone"></i> 1800-1234-5678</p>
-        <a href="https://www.facebook.com/profile.php?id=61551892495218" 
-          target="_blank" 
+        <a href="https://www.facebook.com/profile.php?id=61551892495218" target="_blank" 
           class="facebook-icon">
           <i class="fab fa-facebook-f"></i>
       </a>
@@ -300,4 +292,13 @@
     navLeft.classList.toggle("active");
     navRight.classList.toggle("active");
   });
+
+  // --- join us form arrow ---
+  function toggleJoinForm() {
+  const form = document.getElementById('joinForm');
+  const arrow = document.getElementById('arrow');
+
+  form.classList.toggle('hidden');
+  arrow.classList.toggle('rotate');
+}
 </script>

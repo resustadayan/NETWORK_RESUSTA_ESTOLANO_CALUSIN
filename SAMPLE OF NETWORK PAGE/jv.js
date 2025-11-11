@@ -1,4 +1,3 @@
-// --- Navigation Smooth Scroll and Menu Toggle ---
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll(".nav-links a");
 
@@ -26,18 +25,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// --- Slider Functionality ---
+
 let currentIndex = 0;
 
 function moveSlide(direction) {
   const slider = document.getElementById('slider');
   const cards = document.querySelectorAll('.officer-card');
-  const cardWidth = cards[0].offsetWidth + 30; // includes margin
+  const cardWidth = cards[0].offsetWidth + 10; 
   const totalCards = cards.length;
 
   currentIndex += direction;
 
-  // show 3 cards on desktop, 2 on tablet, 1 on mobile
+
   let visibleCards = 3;
   if (window.innerWidth <= 768) visibleCards = 2;
   if (window.innerWidth <= 600) visibleCards = 1;
@@ -48,10 +47,10 @@ function moveSlide(direction) {
   slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 }
 
-// Auto-slide every 5 seconds
+
 setInterval(() => moveSlide(1), 5000);
 
-// Recalculate on resize
+
 window.addEventListener('resize', () => {
   currentIndex = 0;
   document.getElementById('slider').style.transform = 'translateX(0)';
@@ -60,14 +59,64 @@ window.addEventListener('resize', () => {
 document.getElementById('joinForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const year = document.getElementById('year').value;
             
-            // Simple validation
             if (name && email && year) {
                 alert(`Thank you, ${name}! We've received your application. We'll contact you at ${email}.`);
                 document.getElementById('joinForm').reset();
             }
         });
+
+function showOfficerDetails(element) {
+  const card = element.closest('.officer-card');
+  const name = card.getAttribute('data-name');
+  const age = card.getAttribute('data-age');
+  const position = card.getAttribute('data-position');
+  const social = card.getAttribute('data-social');
+
+  document.getElementById('modalName').textContent = name;
+  document.getElementById('modalAge').textContent = age;
+  document.getElementById('modalPosition').textContent = position;
+  document.getElementById('modalSocial').href = social;
+
+  document.getElementById('officerModal').style.display = 'flex';
+}
+
+function closeOfficerModal() {
+  document.getElementById('officerModal').style.display = 'none';
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById('officerModal');
+  if (event.target === modal) modal.style.display = 'none';
+};
+
+function showOfficerDetails(imgElement) {
+  const card = imgElement.closest('.officer-card');
+  const name = card.dataset.name;
+  const age = card.dataset.age;
+  const position = card.dataset.position;
+  const social = card.dataset.social;
+  const imageSrc = imgElement.src;
+
+  document.getElementById('modalName').textContent = name;
+  document.getElementById('modalAge').textContent = age;
+  document.getElementById('modalPosition').textContent = position;
+  document.getElementById('modalSocial').href = social;
+  document.getElementById('modalImage').src = imageSrc;
+
+  document.getElementById('officerModal').style.display = 'flex';
+}
+
+function closeOfficerModal() {
+  document.getElementById('officerModal').style.display = 'none';
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById('officerModal');
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+}
