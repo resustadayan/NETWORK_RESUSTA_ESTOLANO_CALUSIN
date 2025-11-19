@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetSection = document.getElementById(sectionId);
 
       if (targetSection) {
-        targetSection.scrollIntoView({
+        targetSection.focus({
           behavior: "smooth"
         });
       }
