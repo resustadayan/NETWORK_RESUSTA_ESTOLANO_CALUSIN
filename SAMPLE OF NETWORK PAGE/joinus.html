@@ -322,24 +322,24 @@
 
         <!-- controls -->
         <div class="flex items-center justify-center gap-4 mt-2">
-          <button
+          <btn
             onclick="changeLeader(-1)"
             class="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-gray-800 hover:text-white transition">
             <i class="fas fa-chevron-left text-sm"></i>
-          </button>
+          </btn>
 
           <div class="flex items-center gap-2">
-            <button class="leader-dot w-2.5 h-2.5 rounded-full bg-gray-300" onclick="goToLeader(0)"></button>
-            <button class="leader-dot w-2.5 h-2.5 rounded-full bg-gray-300" onclick="goToLeader(1)"></button>
-            <button class="leader-dot w-2.5 h-2.5 rounded-full bg-gray-300" onclick="goToLeader(2)"></button>
-            <button class="leader-dot w-2.5 h-2.5 rounded-full bg-gray-300" onclick="goToLeader(3)"></button>
+            <btn class="leader-dot w-2.5 h-2.5 rounded-full bg-gray-300" onclick="goToLeader(0)"></btn>
+            <btn class="leader-dot w-2.5 h-2.5 rounded-full bg-gray-300" onclick="goToLeader(1)"></btn>
+            <btn class="leader-dot w-2.5 h-2.5 rounded-full bg-gray-300" onclick="goToLeader(2)"></btn>
+            <btn class="leader-dot w-2.5 h-2.5 rounded-full bg-gray-300" onclick="goToLeader(3)"></btn>
           </div>
 
-          <button
+          <btn
             onclick="changeLeader(1)"
             class="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-gray-800 hover:text-white transition">
             <i class="fas fa-chevron-right text-sm"></i>
-          </button>
+          </btn>
         </div>
       </div>
     </div>
@@ -509,16 +509,16 @@
 
       <!-- arrows under slider -->
       <div class="mt-10 flex items-center justify-center gap-6">
-        <button
+        <btn
           class="slide-btn prev w-10 h-10 rounded-full border border-purple-400/70 flex items-center justify-center hover:bg-purple-500 hover:text-white transition"
           onclick="moveSlide(-1)">
           <i class="fas fa-chevron-left text-sm"></i>
-        </button>
-        <button
+        </btn>
+        <btn
           class="slide-btn next w-10 h-10 rounded-full border border-purple-400/70 flex items-center justify-center hover:bg-purple-500 hover:text-white transition"
           onclick="moveSlide(1)">
           <i class="fas fa-chevron-right text-sm"></i>
-        </button>
+        </btn>
       </div>
     </div>
   </section>
@@ -530,7 +530,7 @@
     onclick="if(event.target === this) closeOfficerModal()"
   >
     <div class="bg-slate-900 rounded-2xl px-6 py-6 max-w-sm w-[90%] text-center relative border border-slate-700">
-      <button
+      <btn
         class="absolute right-4 top-4 text-slate-400 hover:text-white"
         onclick="closeOfficerModal()"
       >
